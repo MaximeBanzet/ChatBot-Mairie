@@ -1,0 +1,11 @@
+# Environement virtuel
+.venv/
+
+#  version Python
+.python-version
+
+#uv lock
+uv.lock
+
+#py project
+pyproject.toml
