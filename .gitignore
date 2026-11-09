@@ -9,3 +9,6 @@ uv.lock
 
 #py project
 pyproject.toml
+
+#setting vs code
+.vscode/
