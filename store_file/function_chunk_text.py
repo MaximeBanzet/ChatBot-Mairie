@@ -9,11 +9,14 @@ def clean_id(text):
 
 def chunk_text(text, source,chunk_size = 100, overlap = 10):
     
-    """
-    Fonction qui prend un texte volumineux en entrée et le découpe 
-    en plusieurs morceaux de taille 100 avec un chevauchement de 10.and
-    Renvoie ensuite une liste de dictionnaires contenant, l'id du chunk, 
-    le document source et le texte du chunk.
+    """Fonction qui prend un texte volumineux en entrée et le découpe en plusieurs morceaux de taille 100 avec un chevauchement de 10.
+
+    :param text: Le texte à découper en chunks.
+    :param source: La source du document.
+    :param chunk_size: La taille de chaque chunk (par défaut 100).
+    :param overlap: Le chevauchement entre les chunks (par défaut 10).
+
+    :return: Une liste de dictionnaires contenant l'id du chunk, la source et le texte du chunk.
     """
 
     words = text.split()

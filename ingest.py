@@ -18,11 +18,11 @@ nécéssaires pour le RAG.
 # Récupérer la clé API Pinecone depuis les variables d'environnement
 pinecone_api_key = os.getenv("PINECONE_API_KEY_PERSO")
 
-#Accéder à Pinecone avec la clé API
+# Accéder à Pinecone avec la clé API
 pc = Pinecone(api_key=pinecone_api_key)
 
 INDEX_NAME = "rag-chatbot-mairie"
-#Créer un index Pinecone pour le chatbot de la mairie
+# Créer un index Pinecone pour le chatbot de la mairie
 if not pc.has_index(INDEX_NAME):
     pc.create_index(
         name = INDEX_NAME,
@@ -35,7 +35,7 @@ if not pc.has_index(INDEX_NAME):
     )
 
 
-#Récupérer l'index Pinecone pour le chatbot de la mairie dans une variable
+# Récupérer l'index Pinecone pour le chatbot de la mairie dans une variable
 index = pc.index(INDEX_NAME)
 
 liste_documents_add = read_word_documents(input_folder="inputs")

@@ -1,14 +1,11 @@
 def add_vector(index, document):
 
-    """
-    Fonction qui créer et retourne un vecteur à partir d'un document,
-    et l'ajoute à l'index Pinecone si celui-ci n'existe pas déjà.
+    """Fonction qui créer et retourne un vecteur à partir d'un document, et l'ajoute à l'index Pinecone si celui-ci n'existe pas déjà.
+    
+    :param index: l'index Pinecone dans lequel ajouter le vecteur.
+    :param document: le document à transformer en vecteur et à ajouter à l'index.
 
-    args : 
-        index : l'index Pinecone dans lequel ajouter le vecteur.
-        document : le document à transformer en vecteur et à ajouter à l'index.
-
-    output : None
+    :return: None
     """
 
     result = index.fetch(ids=[document.id])
