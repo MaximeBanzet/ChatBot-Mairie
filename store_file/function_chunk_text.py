@@ -35,7 +35,7 @@ def chunk_text(text, source,chunk_size = 100, overlap = 10):
         })
         compteur_id += 1
 
-        return chunks
+    return chunks
 
 
 
